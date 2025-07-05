@@ -1,3 +1,17 @@
+uv run --with mlx-lm -- pip install -Uqq mlx mlx_lm mlx_vlm Pillow
+
+LOCAL_MODEL_PATH="./gemma-3n-e4b-it-mlx-bf16-local-git" # Or your path
+
+uv run --with mlx-lm -- python -m mlx_lm.generate \
+    --model "$LOCAL_MODEL_PATH" \
+    --prompt "Write a short, whimsical story about a squirrel who becomes a renowned chef." \
+    --max-tokens 500 \
+    --temp 0.8 \
+    --verbose \
+    --device gpu # <--- Add this
+
+
+
 # 1. Ensure Git LFS is installed and initialized
 # If you used Homebrew:
 brew install git-lfs
