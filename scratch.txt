@@ -1,3 +1,13 @@
+podman run -d \
+  -p 3000:8080 \
+  --name open-webui \
+  -v open-webui:/app/backend/data \
+  --add-host=host.docker.internal:host-gateway \
+  ghcr.io/open-webui/open-webui:main
+
+uv run -- python -m mlx_lm.server --model /path/to/your/model --port 8000
+
+
 uv run --with mlx-lm -- pip install -Uqq mlx mlx_lm mlx_vlm Pillow
 
 LOCAL_MODEL_PATH="./gemma-3n-e4b-it-mlx-bf16-local-git" # Or your path
