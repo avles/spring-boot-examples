@@ -1,0 +1,395 @@
+examples:
+    # Response Examples
+    pricing-calendar-response-success:
+      summary: "Successful pricing calendar response - BNE to LHR roundtrip"
+      description: "Example response with available offers and pricing calendar for Brisbane to London via Doha"
+      value:
+        meta:
+          status: HIT
+          fetchedAt: "2025-07-16T10:30:00Z"
+          cachedAt: "2025-07-16T10:30:00Z"
+          expiresAt: "2025-07-16T10:30:00Z"
+          originMessageId: ["MSG-987654321", "MSG-987654322", "MSG-987654323"]
+          routeRegionType: "INT"
+        dataList:
+          originDestinations:
+            - originDestId: "OD1"
+              originCode: "BNE"
+              destinationCode: "LHR"
+              journeyIds: ["J1", "J3", "J5"]
+            - originDestId: "OD2"
+              originCode: "LHR"
+              destinationCode: "BNE"
+              journeyIds: ["J2", "J4", "J6"]              
+          paxJourneys:
+            - journeyId: "J1"
+              segmentIds: ["S1", "S2"]
+            - journeyId: "J2"
+              segmentIds: ["S3", "S4"]
+            - journeyId: "J3"
+              segmentIds: ["S5", "S6"]
+            - journeyId: "J4"
+              segmentIds: ["S7", "S8"]
+            - journeyId: "J5"
+              segmentIds: ["S9", "S10"]
+            - journeyId: "J6"
+              segmentIds: ["S11", "S12"]              
+          paxSegments:
+            # Offer 1 - Departure Aug 1, Return Aug 7
+            - segmentId: "S1"
+              departureDate: "2025-08-01T23:55:00"
+              arrivalDate: "2025-08-02T05:25:00"
+              origin: "BNE"
+              destination: "DOH"
+              operatingCarrierFlightNumber: "QR898"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR898"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 7039
+              fareBasisCode: "YLOWGB"
+              equipmentType: "777"
+            - segmentId: "S2"
+              departureDate: "2025-08-02T08:20:00"
+              arrivalDate: "2025-08-02T13:40:00"
+              origin: "DOH"
+              destination: "LHR"
+              operatingCarrierFlightNumber: "QR001"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR001"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 3404
+              fareBasisCode: "YLOWGB"
+              equipmentType: "A350"
+            - segmentId: "S3"
+              departureDate: "2025-08-07T21:20:00"
+              arrivalDate: "2025-08-08T06:40:00"
+              origin: "LHR"
+              destination: "DOH"
+              operatingCarrierFlightNumber: "QR002"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR002"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 3404
+              fareBasisCode: "YLOWGB"
+              equipmentType: "A350"
+            - segmentId: "S4"
+              departureDate: "2025-08-08T08:25:00"
+              arrivalDate: "2025-08-09T06:05:00"
+              origin: "DOH"
+              destination: "BNE"
+              operatingCarrierFlightNumber: "QR899"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR899"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 7039
+              fareBasisCode: "YLOWGB"
+              equipmentType: "777"
+            # Offer 2 - Departure Aug 2, Return Aug 8
+            - segmentId: "S5"
+              departureDate: "2025-08-02T23:55:00"
+              arrivalDate: "2025-08-03T05:25:00"
+              origin: "BNE"
+              destination: "DOH"
+              operatingCarrierFlightNumber: "QR898"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR898"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 7039
+              fareBasisCode: "YMIDGB"
+              equipmentType: "777"
+            - segmentId: "S6"
+              departureDate: "2025-08-03T08:20:00"
+              arrivalDate: "2025-08-03T13:40:00"
+              origin: "DOH"
+              destination: "LHR"
+              operatingCarrierFlightNumber: "QR001"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR001"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 3404
+              fareBasisCode: "YMIDGB"
+              equipmentType: "A350"
+            - segmentId: "S7"
+              departureDate: "2025-08-08T21:20:00"
+              arrivalDate: "2025-08-09T06:40:00"
+              origin: "LHR"
+              destination: "DOH"
+              operatingCarrierFlightNumber: "QR002"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR002"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 3404
+              fareBasisCode: "YMIDGB"
+              equipmentType: "A350"
+            - segmentId: "S8"
+              departureDate: "2025-08-09T08:25:00"
+              arrivalDate: "2025-08-10T06:05:00"
+              origin: "DOH"
+              destination: "BNE"
+              operatingCarrierFlightNumber: "QR899"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR899"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 7039
+              fareBasisCode: "YMIDGB"
+              equipmentType: "777"
+            # Offer 3 - Departure Aug 3, Return Aug 9
+            - segmentId: "S9"
+              departureDate: "2025-08-03T23:55:00"
+              arrivalDate: "2025-08-04T05:25:00"
+              origin: "BNE"
+              destination: "DOH"
+              operatingCarrierFlightNumber: "QR898"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR898"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 7039
+              fareBasisCode: "YHIGHGB"
+              equipmentType: "777"
+            - segmentId: "S10"
+              departureDate: "2025-08-04T08:20:00"
+              arrivalDate: "2025-08-04T13:40:00"
+              origin: "DOH"
+              destination: "LHR"
+              operatingCarrierFlightNumber: "QR001"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR001"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 3404
+              fareBasisCode: "YHIGHGB"
+              equipmentType: "A350"
+            - segmentId: "S11"
+              departureDate: "2025-08-09T21:20:00"
+              arrivalDate: "2025-08-10T06:40:00"
+              origin: "LHR"
+              destination: "DOH"
+              operatingCarrierFlightNumber: "QR002"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR002"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 3404
+              fareBasisCode: "YHIGHGB"
+              equipmentType: "A350"
+            - segmentId: "S12"
+              departureDate: "2025-08-10T08:25:00"
+              arrivalDate: "2025-08-11T06:05:00"
+              origin: "DOH"
+              destination: "BNE"
+              operatingCarrierFlightNumber: "QR899"
+              operatingCarrier: "QR"
+              marketingCarrierFlightNumber: "QR899"
+              marketingCarrier: "QR"
+              bookingClass: "Y"
+              mileageValue: 7039
+              fareBasisCode: "YHIGHGB"
+              equipmentType: "777"        
+        offers:
+          - offerId: "OFFER-BNE-LHR-001"
+            status: "AVAILABLE"
+            availability:
+              bookingClass: "Y"
+              seatsRemaining: 4
+            characteristics:
+              isDiscountedFare: false
+              isPromoApplied: false
+              isMonthlyLow: true
+              lengthOfStay: 6
+            priceClass:
+              priceClassId: "LT"
+            journeyReference:
+              - journeyId: "J1"
+              - journeyId: "J2"
+            totalPrice:
+              baseFare:
+                amount: "1650.00"
+                currency: "AUD"
+              totalFare:
+                amount: "1985.50"
+                currency: "AUD"
+                alternative:
+                  amount: "98275"
+                  currency: "PTS"
+              taxes:
+                amount: "335.50"
+                currency: "AUD"
+            offerItems:
+              - type: "JOURNEY_PRICE"
+                referenceId: "J1"
+                price:
+                  baseFare:
+                    amount: "825.00"
+                    currency: "AUD"
+                  totalFare:
+                    amount: "992.75"
+                    currency: "AUD"
+                  taxes:
+                    amount: "167.75"
+                    currency: "AUD"
+              - type: "JOURNEY_PRICE"
+                referenceId: "J2"
+                price:
+                  baseFare:
+                    amount: "825.00"
+                    currency: "AUD"
+                  totalFare:
+                    amount: "992.75"
+                    currency: "AUD"
+                  taxes:
+                    amount: "167.75"
+                    currency: "AUD"
+          - offerId: "OFFER-BNE-LHR-002"
+            status: "AVAILABLE"
+            availability:
+              bookingClass: "Y"
+              seatsRemaining: 6
+            characteristics:
+              isDiscountedFare: false
+              isPromoApplied: false
+              isMonthlyLow: false
+              lengthOfStay: 6
+            priceClass:
+              priceClassId: "MT"
+            journeyReference:
+              - journeyId: "J3"
+              - journeyId: "J4"
+            totalPrice:
+              baseFare:
+                amount: "1785.00"
+                currency: "AUD"
+              totalFare:
+                amount: "2148.25"
+                currency: "AUD"
+                alternative:
+                  amount: "106413"
+                  currency: "PTS"
+              taxes:
+                amount: "363.25"
+                currency: "AUD"
+            offerItems:
+              - type: "JOURNEY_PRICE"
+                referenceId: "J3"
+                price:
+                  baseFare:
+                    amount: "892.50"
+                    currency: "AUD"
+                  totalFare:
+                    amount: "1074.13"
+                    currency: "AUD"
+                  taxes:
+                    amount: "181.63"
+                    currency: "AUD"
+              - type: "JOURNEY_PRICE"
+                referenceId: "J4"
+                price:
+                  baseFare:
+                    amount: "892.50"
+                    currency: "AUD"
+                  totalFare:
+                    amount: "1074.12"
+                    currency: "AUD"
+                  taxes:
+                    amount: "181.62"
+                    currency: "AUD"
+          - offerId: "OFFER-BNE-LHR-003"
+            status: "AVAILABLE"
+            availability:
+              bookingClass: "Y"
+              seatsRemaining: 2
+            characteristics:
+              isDiscountedFare: false
+              isPromoApplied: false
+              isMonthlyLow: false
+              lengthOfStay: 6
+            priceClass:
+              priceClassId: "HT"
+            journeyReference:
+              - journeyId: "J5"
+              - journeyId: "J6"
+            totalPrice:
+              baseFare:
+                amount: "1920.00"
+                currency: "AUD"
+              totalFare:
+                amount: "2311.00"
+                currency: "AUD"
+                alternative:
+                  amount: "114425"
+                  currency: "PTS"
+              taxes:
+                amount: "391.00"
+                currency: "AUD"
+            offerItems:
+              - type: "JOURNEY_PRICE"
+                referenceId: "J5"
+                price:
+                  baseFare:
+                    amount: "960.00"
+                    currency: "AUD"
+                  totalFare:
+                    amount: "1155.50"
+                    currency: "AUD"
+                  taxes:
+                    amount: "195.50"
+                    currency: "AUD"
+              - type: "JOURNEY_PRICE"
+                referenceId: "J6"
+                price:
+                  baseFare:
+                    amount: "960.00"
+                    currency: "AUD"
+                  totalFare:
+                    amount: "1155.50"
+                    currency: "AUD"
+                  taxes:
+                    amount: "195.50"
+                    currency: "AUD"
+        priceCalendar:
+          calendar:
+            - departureDate: "2025-08-01"
+              arrivalDate: "2025-08-07"
+              lengthOfStay: 6
+              offerId: "OFFER-BNE-LHR-001"
+            - departureDate: "2025-08-02"
+              arrivalDate: "2025-08-08"
+              lengthOfStay: 6
+              offerId: "OFFER-BNE-LHR-002"
+            - departureDate: "2025-08-03"
+              arrivalDate: "2025-08-09"
+              lengthOfStay: 6
+              offerId: "OFFER-BNE-LHR-003"
+        messages:
+          warnings:
+            - code: "WARN_001"
+              message: "Limited availability for selected dates"
+              severity: "WARNING"
+            - code: "WARN_002"
+              message: "Minimum connection time in DOH is 75 minutes for international transfers"
+              severity: "WARNING"
+            - code: "WARN_003"
+              message: "Transit visa may be required for DOH connection depending on nationality"
+              severity: "WARNING"
+          notices:
+            - code: "NOTICE_001"
+              message: "Prices include all taxes and fees"
+              severity: "NOTICE"
+            - code: "NOTICE_002"
+              message: "Points redemption values are estimates and may vary"
+              severity: "NOTICE"
+            - code: "NOTICE_003"
+              message: "All flights operated by Qatar Airways with Boeing 777 and Airbus A350 aircraft"
+              severity: "NOTICE"
+            - code: "NOTICE_004"
+              message: "Baggage allowance: 30kg checked baggage included"
+              severity: "NOTICE"
+          errors: []
